@@ -31,7 +31,7 @@ public class WordFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false));
         adapter = new WordAdapter();
         recyclerView.setAdapter(adapter);
-        viewPager2 = view.findViewById(R.id.viewPager2);
+//        viewPager2 = view.findViewById(R.id.viewPager2);
         viewPager2.setAdapter(adapter);
         viewPager2.setOrientation(ViewPager2.ORIENTATION_VERTICAL);
         viewPager2.setOffscreenPageLimit(1);
