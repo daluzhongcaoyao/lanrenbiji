@@ -13,9 +13,24 @@ import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lanrenbiji.dict.R;
+import com.lanrenbiji.dict.word.data.SimpleWordDataDto;
+import com.lanrenbiji.dict.word.ui.items.ImageTextCustomLayout;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class WordFragment extends Fragment {
-    private RecyclerView mRecyclerView;
+    @BindView(R.id.recyclerView)
+    RecyclerView mRecyclerView;
+
+    @BindView(R.id.longman)
+    ImageTextCustomLayout longman;
+
+    @BindView(R.id.collins)
+    ImageTextCustomLayout collins;
+
+    @BindView(R.id.oxford)
+    ImageTextCustomLayout oxford;
 
     public WordFragment() {
     }
@@ -24,7 +39,7 @@ public class WordFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_word, container, false);
-        mRecyclerView = view.findViewById(R.id.recyclerView);
+        ButterKnife.bind(this, view);
 
         WordAdapter adapter = new WordAdapter();
         mRecyclerView.setAdapter(adapter);
@@ -35,7 +50,14 @@ public class WordFragment extends Fragment {
         PagerSnapHelper snapHelper = new PagerSnapHelper();
         snapHelper.attachToRecyclerView(mRecyclerView);
 
+        // 给按钮增加获取recycleView当前数据的监听器
+        longman.setRecycleViewDataCallback(adapter::getCurrentData);
+        collins.setRecycleViewDataCallback(adapter::getCurrentData);
+        oxford.setRecycleViewDataCallback(adapter::getCurrentData);
+
         return view;
     }
 
+
 }
+

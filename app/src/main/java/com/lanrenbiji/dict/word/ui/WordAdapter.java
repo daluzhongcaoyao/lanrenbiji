@@ -14,6 +14,10 @@ import java.util.List;
 
 class WordAdapter extends RecyclerView.Adapter<WordViewHolder> {
     private final List<SimpleWordDataDto> words = new ArrayList<>();
+    /**
+     * recycleView当前页的数据
+     */
+    private SimpleWordDataDto currentData;
 
 
     WordAdapter() {
@@ -33,6 +37,7 @@ class WordAdapter extends RecyclerView.Adapter<WordViewHolder> {
         holder.itemView.setLayoutParams(layoutParams);
         // 绑定数据
         SimpleWordDataDto simpleWordDataDto = words.get(position);
+        currentData = simpleWordDataDto;
         holder.bind(simpleWordDataDto);
 
 
@@ -42,6 +47,10 @@ class WordAdapter extends RecyclerView.Adapter<WordViewHolder> {
     public int getItemCount() {
         // 返回数据项数量
         return words.size();
+    }
+
+    public SimpleWordDataDto getCurrentData(){
+        return currentData;
     }
 
     private void initData(){

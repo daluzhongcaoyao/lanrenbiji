@@ -8,4 +8,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- 字典类型-->
+    <string name="dict_type_longman">朗文</string>
+    <string name="dict_type_collins">柯林斯</string>
+    <string name="dict_type_oxford">牛津</string>
 </resources>

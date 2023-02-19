@@ -1,14 +1,14 @@
-package com.lanrenbiji.dict.ui.notifications;
+package com.lanrenbiji.dict.dict;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class WebViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public WebViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is notifications fragment");
     }

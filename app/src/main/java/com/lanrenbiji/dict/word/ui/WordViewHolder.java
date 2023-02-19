@@ -50,7 +50,7 @@ class WordViewHolder extends RecyclerView.ViewHolder {
     }
 
     private int getColor(Integer collins) {
-        int color = ContextCompat.getColor(itemView.getContext(), R.color.gray_13);
+        int color = ContextCompat.getColor(itemView.getContext(), R.color.gray_9);
         if (Objects.isNull(collins)){
             return color;
         }

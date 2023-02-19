@@ -25,13 +25,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="16dp" />
 
-    <Button
-        android:id="@+id/button"
+    <com.lanrenbiji.dict.word.ui.items.ImageTextCustomLayout
+        android:id="@+id/longman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@id/collins"
+        app:layout_constraintLeft_toLeftOf="@id/collins"
+        app:layout_constraintRight_toRightOf="@id/collins"
+        android:layout_marginBottom="20dp"
+        app:icon="@drawable/launcher"
+        app:text="@string/dict_type_longman" />
+
+    <com.lanrenbiji.dict.word.ui.items.ImageTextCustomLayout
+        android:id="@+id/collins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/oxford"
+        app:layout_constraintLeft_toLeftOf="@id/oxford"
+        app:layout_constraintRight_toRightOf="@id/oxford"
+        android:layout_marginBottom="20dp"
+        app:icon="@drawable/launcher"
+        app:text="@string/dict_type_collins" />
+
+    <com.lanrenbiji.dict.word.ui.items.ImageTextCustomLayout
+        android:id="@+id/oxford"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp" />
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="14dp"
+        app:icon="@drawable/launcher"
+        app:text="@string/dict_type_oxford" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
