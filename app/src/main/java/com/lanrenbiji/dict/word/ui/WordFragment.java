@@ -1,4 +1,4 @@
-package com.lanrenbiji.dict.ui.recommend;
+package com.lanrenbiji.dict.word.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,19 +14,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.lanrenbiji.dict.R;
 
-public class MyFragment extends Fragment {
+public class WordFragment extends Fragment {
     private RecyclerView mRecyclerView;
 
-    public MyFragment() {
+    public WordFragment() {
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_my, container, false);
+        View view = inflater.inflate(R.layout.fragment_word, container, false);
         mRecyclerView = view.findViewById(R.id.recyclerView);
 
-        MyAdapter adapter = new MyAdapter();
+        WordAdapter adapter = new WordAdapter();
         mRecyclerView.setAdapter(adapter);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
@@ -38,14 +38,4 @@ public class MyFragment extends Fragment {
         return view;
     }
 
-
-
-    private class MyViewHolder extends RecyclerView.ViewHolder {
-        // 定义ViewHolder内部控件变量
-
-        public MyViewHolder(View itemView) {
-            super(itemView);
-            // 初始化ViewHolder内部控件变量
-        }
-    }
 }

@@ -2,4 +2,28 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 字体大小 -->
+    <dimen name="font_size_12">12sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="font_size_24">24sp</dimen>
+    <dimen name="font_size_30">30sp</dimen>
+    <dimen name="font_size_38">38sp</dimen>
+    <dimen name="font_size_46">46sp</dimen>
+    <dimen name="font_size_56">56sp</dimen>
+    <dimen name="font_size_68">68sp</dimen>
+
+    <!-- 与字体大小对应的行高 -->
+    <dimen name="line_height_of_font_size_12">20dp</dimen>
+    <dimen name="line_height_of_font_size_14">22dp</dimen>
+    <dimen name="line_height_of_font_size_16">24dp</dimen>
+    <dimen name="line_height_of_font_size_20">28dp</dimen>
+    <dimen name="line_height_of_font_size_24">32dp</dimen>
+    <dimen name="line_height_of_font_size_30">38dp</dimen>
+    <dimen name="line_height_of_font_size_38">46dp</dimen>
+    <dimen name="line_height_of_font_size_46">54dp</dimen>
+    <dimen name="line_height_of_font_size_56">64dp</dimen>
+    <dimen name="line_height_of_font_size_68">76dp</dimen>
 </resources>

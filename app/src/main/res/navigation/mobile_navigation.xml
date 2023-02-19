@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.lanrenbiji.dict.ui.recommend.MyFragment"
+        android:name="com.lanrenbiji.dict.word.ui.WordFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_dashboard" />
 

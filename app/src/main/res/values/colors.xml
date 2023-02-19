@@ -12,15 +12,166 @@
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
-    <color name="blue_1">#e6f4ff00</color>
-    <color name="blue_2">#bae0ff00</color>
-    <color name="blue_3">#91caff00</color>
-    <color name="blue_4">#69b1ff00</color>
-    <color name="blue_5">#4096ff00</color>
-    <color name="blue_6">#1677ff00</color>
-    <color name="blue_7">#0958d900</color>
-    <color name="blue_8">#003eb300</color>
-    <color name="blue_9">#002c8c00</color>
-    <color name="blue_10">#001d6600</color>
+
+    <!-- 中性色板 -->
+    <color name="gray_1">#ffffff</color>  <!-- 这个是纯白色 -->
+    <color name="gray_2">#fafafa</color>
+    <color name="gray_3">#f5f5f5</color>
+    <color name="gray_4">#f0f0f0</color>
+    <color name="gray_5">#d9d9d9</color>
+    <color name="gray_6">#bfbfbf</color>
+    <color name="gray_7">#8c8c8c</color>
+    <color name="gray_8">#595959</color>
+    <color name="gray_9">#434343</color>
+    <color name="gray_10">#262626</color>
+    <color name="gray_11">#1f1f1f</color>
+    <color name="gray_12">#141414</color>
+    <color name="gray_13">#000000</color> <!-- 这个是纯黑色 -->
+
+    <!-- Dust Red / 薄暮-->
+    <color name="dust_red_1">#fff1f0</color>
+    <color name="dust_red_2">#ffccc7</color>
+    <color name="dust_red_3">#ffa39e</color>
+    <color name="dust_red_4">#ff7875</color>
+    <color name="dust_red_5">#ff4d4f</color>
+    <color name="dust_red_6">#f5222d</color>
+    <color name="dust_red_7">#cf1322</color>
+    <color name="dust_red_8">#a8071a</color>
+    <color name="dust_red_9">#820014</color>
+    <color name="dust_red_10">#5c0011</color>
+
+    <!-- Volcano / 火山-->
+    <color name="volcano_1">#fff2e8</color>
+    <color name="volcano_2">#ffd8bf</color>
+    <color name="volcano_3">#ffbb96</color>
+    <color name="volcano_4">#ff9c6e</color>
+    <color name="volcano_5">#ff7a45</color>
+    <color name="volcano_6">#fa541c</color>
+    <color name="volcano_7">#d4380d</color>
+    <color name="volcano_8">#ad2102</color>
+    <color name="volcano_9">#871400</color>
+    <color name="volcano_10">#610b00</color>
+
+    <!-- Sunset Orange / 日暮-->
+    <color name="sunset_orange_1">#fff7e6</color>
+    <color name="sunset_orange_2">#ffe7ba</color>
+    <color name="sunset_orange_3">#ffd591</color>
+    <color name="sunset_orange_4">#ffc069</color>
+    <color name="sunset_orange_5">#ffa940</color>
+    <color name="sunset_orange_6">#fa8c16</color>
+    <color name="sunset_orange_7">#d46b08</color>
+    <color name="sunset_orange_8">#ad4e00</color>
+    <color name="sunset_orange_9">#873800</color>
+    <color name="sunset_orange_10">#612500</color>
+
+    <!-- Calendula Gold / 金盏花-->
+    <color name="calendula_gold_1">#fffbe6</color>
+    <color name="calendula_gold_2">#fff1b8</color>
+    <color name="calendula_gold_3">#ffe58f</color>
+    <color name="calendula_gold_4">#ffd666</color>
+    <color name="calendula_gold_5">#ffc53d</color>
+    <color name="calendula_gold_6">#faad14</color>
+    <color name="calendula_gold_7">#d48806</color>
+    <color name="calendula_gold_8">#ad6800</color>
+    <color name="calendula_gold_9">#874d00</color>
+    <color name="calendula_gold_10">#613400</color>
+
+    <!-- Sunrise Yellow / 日出-->
+    <color name="sunrise_yellow_1">#feffe6</color>
+    <color name="sunrise_yellow_2">#ffffb8</color>
+    <color name="sunrise_yellow_3">#fffb8f</color>
+    <color name="sunrise_yellow_4">#fff566</color>
+    <color name="sunrise_yellow_5">#ffec3d</color>
+    <color name="sunrise_yellow_6">#fadb14</color>
+    <color name="sunrise_yellow_7">#d4b106</color>
+    <color name="sunrise_yellow_8">#ad8b00</color>
+    <color name="sunrise_yellow_9">#876800</color>
+    <color name="sunrise_yellow_10">#614700</color>
+
+    <!-- Lime / 青柠-->
+    <color name="lime_1">#fcffe6</color>
+    <color name="lime_2">#f4ffb8</color>
+    <color name="lime_3">#eaff8f</color>
+    <color name="lime_4">#d3f261</color>
+    <color name="lime_5">#bae637</color>
+    <color name="lime_6">#a0d911</color>
+    <color name="lime_7">#7cb305</color>
+    <color name="lime_8">#5b8c00</color>
+    <color name="lime_9">#3f6600</color>
+    <color name="lime_10">#254000</color>
+
+    <!-- Polar Green / 极光绿-->
+    <color name="ploar_green_1">#f6ffed</color>
+    <color name="ploar_green_2">#d9f7be</color>
+    <color name="ploar_green_3">#b7eb8f</color>
+    <color name="ploar_green_4">#95de64</color>
+    <color name="ploar_green_5">#73d13d</color>
+    <color name="ploar_green_6">#52c41a</color>
+    <color name="ploar_green_7">#389e0d</color>
+    <color name="ploar_green_8">#237804</color>
+    <color name="ploar_green_9">#135200</color>
+    <color name="ploar_green_10">#092b00</color>
+
+    <!-- Cyan / 明青-->
+    <color name="cyan_1">#e6fffb</color>
+    <color name="cyan_2">#b5f5ec</color>
+    <color name="cyan_3">#87e8de</color>
+    <color name="cyan_4">#5cdbd3</color>
+    <color name="cyan_5">#36cfc9</color>
+    <color name="cyan_6">#13c2c2</color>
+    <color name="cyan_7">#08979c</color>
+    <color name="cyan_8">#006d75</color>
+    <color name="cyan_9">#00474f</color>
+    <color name="cyan_10">#002329</color>
+
+    <!-- Daybreak Blue / 拂晓蓝-->
+    <color name="daybreak_blue_1">#e6f4ff</color>
+    <color name="daybreak_blue_2">#bae0ff</color>
+    <color name="daybreak_blue_3">#91caff</color>
+    <color name="daybreak_blue_4">#69b1ff</color>
+    <color name="daybreak_blue_5">#4096ff</color>
+    <color name="daybreak_blue_6">#1677ff</color>
+    <color name="daybreak_blue_7">#0958d9</color>
+    <color name="daybreak_blue_8">#003eb3</color>
+    <color name="daybreak_blue_9">#002c8c</color>
+    <color name="daybreak_blue_10">#001d66</color>
+
+    <!-- Geek Blue / 极客蓝-->
+    <color name="geek_blue_1">#f0f5ff</color>
+    <color name="geek_blue_2">#d6e4ff</color>
+    <color name="geek_blue_3">#adc6ff</color>
+    <color name="geek_blue_4">#85a5ff</color>
+    <color name="geek_blue_5">#597ef7</color>
+    <color name="geek_blue_6">#2f54eb</color>
+    <color name="geek_blue_7">#1d39c4</color>
+    <color name="geek_blue_8">#10239e</color>
+    <color name="geek_blue_9">#061178</color>
+    <color name="geek_blue_10">#030852</color>
+
+    <!-- Golden Purple / 酱紫-->
+    <color name="golden_purple_1">#f9f0ff</color>
+    <color name="golden_purple_2">#efdbff</color>
+    <color name="golden_purple_3">#d3adf7</color>
+    <color name="golden_purple_4">#b37feb</color>
+    <color name="golden_purple_5">#9254de</color>
+    <color name="golden_purple_6">#722ed1</color>
+    <color name="golden_purple_7">#531dab</color>
+    <color name="golden_purple_8">#391085</color>
+    <color name="golden_purple_9">#22075e</color>
+    <color name="golden_purple_10">#120338</color>
+
+    <!-- Magenta / 法式洋红-->
+    <color name="magenta_1">#fff0f6</color>
+    <color name="magenta_2">#ffd6e7</color>
+    <color name="magenta_3">#ffadd2</color>
+    <color name="magenta_4">#ff85c0</color>
+    <color name="magenta_5">#f759ab</color>
+    <color name="magenta_6">#eb2f96</color>
+    <color name="magenta_7">#c41d7f</color>
+    <color name="magenta_8">#9e1068</color>
+    <color name="magenta_9">#780650</color>
+    <color name="magenta_10">#520339</color>
+
+
 
 </resources>
