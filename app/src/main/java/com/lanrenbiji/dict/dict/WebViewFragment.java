@@ -28,7 +28,7 @@ public class WebViewFragment extends Fragment {
 
     private final String url;
 
-    WebViewFragment(){
+    public  WebViewFragment(){
         this.url = "https://lanrenbiji.cn";
     }
 
@@ -41,7 +41,6 @@ public class WebViewFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         webViewModel =
                 new ViewModelProvider(this).get(WebViewModel.class);
-
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 

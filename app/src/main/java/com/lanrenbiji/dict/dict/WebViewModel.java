@@ -6,14 +6,13 @@ import androidx.lifecycle.ViewModel;
 
 public class WebViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    private MutableLiveData<String> mUrl = new MutableLiveData<>();
 
-    public WebViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+    public void setUrl(String url) {
+        mUrl.setValue(url);
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<String> getUrl() {
+        return mUrl;
     }
 }

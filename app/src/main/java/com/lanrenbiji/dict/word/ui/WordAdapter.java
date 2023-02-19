@@ -12,15 +12,12 @@ import com.lanrenbiji.dict.word.data.SimpleWordDataDto;
 import java.util.ArrayList;
 import java.util.List;
 
-class WordAdapter extends RecyclerView.Adapter<WordViewHolder> {
+public class WordAdapter extends RecyclerView.Adapter<WordViewHolder> {
     private final List<SimpleWordDataDto> words = new ArrayList<>();
-    /**
-     * recycleView当前页的数据
-     */
-    private SimpleWordDataDto currentData;
 
 
-    WordAdapter() {
+
+    public WordAdapter() {
         initData();
     }
 
@@ -37,7 +34,6 @@ class WordAdapter extends RecyclerView.Adapter<WordViewHolder> {
         holder.itemView.setLayoutParams(layoutParams);
         // 绑定数据
         SimpleWordDataDto simpleWordDataDto = words.get(position);
-        currentData = simpleWordDataDto;
         holder.bind(simpleWordDataDto);
 
 
@@ -49,8 +45,9 @@ class WordAdapter extends RecyclerView.Adapter<WordViewHolder> {
         return words.size();
     }
 
-    public SimpleWordDataDto getCurrentData(){
-        return currentData;
+    public SimpleWordDataDto getItemAtPosition(int position){
+        return words.get(position);
+
     }
 
     private void initData(){

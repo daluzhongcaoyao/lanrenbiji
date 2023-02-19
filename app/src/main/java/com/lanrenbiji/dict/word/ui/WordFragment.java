@@ -51,13 +51,16 @@ public class WordFragment extends Fragment {
         snapHelper.attachToRecyclerView(mRecyclerView);
 
         // 给按钮增加获取recycleView当前数据的监听器
-        longman.setRecycleViewDataCallback(adapter::getCurrentData);
-        collins.setRecycleViewDataCallback(adapter::getCurrentData);
-        oxford.setRecycleViewDataCallback(adapter::getCurrentData);
+        longman.setWordFragment(this);
+        collins.setWordFragment(this);
+        oxford.setWordFragment(this);
 
         return view;
     }
 
+    public RecyclerView getRecyclerView(){
+        return mRecyclerView;
+    }
 
 }
 

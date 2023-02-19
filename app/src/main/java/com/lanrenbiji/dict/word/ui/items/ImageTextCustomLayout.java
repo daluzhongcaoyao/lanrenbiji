@@ -10,14 +10,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.lanrenbiji.dict.R;
 import com.lanrenbiji.dict.dict.WebViewFragment;
 import com.lanrenbiji.dict.word.data.SimpleWordDataDto;
 import com.lanrenbiji.dict.word.ui.IRecycleViewDataCallback;
+import com.lanrenbiji.dict.word.ui.WordAdapter;
+import com.lanrenbiji.dict.word.ui.WordFragment;
 
+import java.util.Objects;
 import java.util.Optional;
 
 import butterknife.BindView;
@@ -35,7 +41,7 @@ public class ImageTextCustomLayout extends LinearLayout {
     private final String  DICT_TYPE_COLLINS;
     private final String  DICT_TYPE_OXFORD;
 
-   private IRecycleViewDataCallback dataCallback;
+   private   WordFragment mFragment;
 
     public ImageTextCustomLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -64,12 +70,13 @@ public class ImageTextCustomLayout extends LinearLayout {
     }
 
    private void onclick(View v){
-       SimpleWordDataDto currentData = dataCallback.getCurrentData();
+       SimpleWordDataDto currentData = getCurrentData();
        String dictType = Optional.of(mText).map(TextView::getText).map(CharSequence::toString).orElse("");
        if (TextUtils.isEmpty(dictType)){
            return;
        }
 
+       System.out.println("zktest currentData" +currentData);
        String url = "";
        if (DICT_TYPE_LONGMAN.equals(dictType)){
             url = "https://www.ldoceonline.com/dictionary/" + currentData.getWord();
@@ -88,9 +95,32 @@ public class ImageTextCustomLayout extends LinearLayout {
        transaction.commit();
    }
 
-    public void setRecycleViewDataCallback(IRecycleViewDataCallback callback) {
-        this.dataCallback = callback;
+   public void setWordFragment(WordFragment fragment){
+       mFragment =fragment;
+   }
+
+    SimpleWordDataDto getCurrentData(){
+        SimpleWordDataDto simpleWordDataDto = new SimpleWordDataDto();
+        RecyclerView recyclerView = mFragment.getRecyclerView();
+        if (Objects.isNull(recyclerView)){
+            return simpleWordDataDto;
+        }
+        LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+        if (Objects.isNull(layoutManager)){
+            return simpleWordDataDto;
+        }
+        int position = layoutManager.findFirstVisibleItemPosition();
+        if (position != RecyclerView.NO_POSITION) {
+            // getSimpleWordDataAtPosition
+            RecyclerView.Adapter adapter = recyclerView.getAdapter();
+            if (adapter instanceof WordAdapter) {
+                simpleWordDataDto = ((WordAdapter) adapter).getItemAtPosition(position);
+            }
+        }
+        return simpleWordDataDto;
     }
+
+
 }
 
 
