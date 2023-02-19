@@ -13,8 +13,7 @@ import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lanrenbiji.dict.R;
-import com.lanrenbiji.dict.word.data.SimpleWordDataDto;
-import com.lanrenbiji.dict.word.ui.items.ImageTextCustomLayout;
+import com.lanrenbiji.dict.word.ui.items.WordImageTextCustomLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,13 +23,13 @@ public class WordFragment extends Fragment {
     RecyclerView mRecyclerView;
 
     @BindView(R.id.longman)
-    ImageTextCustomLayout longman;
+    WordImageTextCustomLayout longman;
 
     @BindView(R.id.collins)
-    ImageTextCustomLayout collins;
+    WordImageTextCustomLayout collins;
 
     @BindView(R.id.oxford)
-    ImageTextCustomLayout oxford;
+    WordImageTextCustomLayout oxford;
 
     public WordFragment() {
     }
@@ -51,9 +50,9 @@ public class WordFragment extends Fragment {
         snapHelper.attachToRecyclerView(mRecyclerView);
 
         // 给按钮增加获取recycleView当前数据的监听器
-        longman.setWordFragment(this);
-        collins.setWordFragment(this);
-        oxford.setWordFragment(this);
+        longman.setFragment(this);
+        collins.setFragment(this);
+        oxford.setFragment(this);
 
         return view;
     }

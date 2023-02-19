@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="16dp" />
 
-    <com.lanrenbiji.dict.word.ui.items.ImageTextCustomLayout
+    <com.lanrenbiji.dict.word.ui.items.WordImageTextCustomLayout
         android:id="@+id/longman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         app:icon="@drawable/launcher"
         app:text="@string/dict_type_longman" />
 
-    <com.lanrenbiji.dict.word.ui.items.ImageTextCustomLayout
+    <com.lanrenbiji.dict.word.ui.items.WordImageTextCustomLayout
         android:id="@+id/collins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         app:icon="@drawable/launcher"
         app:text="@string/dict_type_collins" />
 
-    <com.lanrenbiji.dict.word.ui.items.ImageTextCustomLayout
+    <com.lanrenbiji.dict.word.ui.items.WordImageTextCustomLayout
         android:id="@+id/oxford"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
