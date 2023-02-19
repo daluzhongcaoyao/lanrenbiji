@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,11 +44,18 @@ public class WordFragment extends Fragment {
         WordAdapter adapter = new WordAdapter();
         mRecyclerView.setAdapter(adapter);
 
+        // 纵向列表
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(layoutManager);
 
+        // 每次滑动切换一整页
         PagerSnapHelper snapHelper = new PagerSnapHelper();
         snapHelper.attachToRecyclerView(mRecyclerView);
+
+        // 左右滑动的监听
+        WordItemTouchHelper myItemTouchHelper = new WordItemTouchHelper(mRecyclerView, adapter);
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(myItemTouchHelper);
+        itemTouchHelper.attachToRecyclerView(mRecyclerView);
 
         // 给按钮增加获取recycleView当前数据的监听器
         longman.setFragment(this);

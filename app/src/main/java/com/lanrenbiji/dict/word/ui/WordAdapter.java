@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lanrenbiji.dict.R;
@@ -47,7 +48,10 @@ public class WordAdapter extends RecyclerView.Adapter<WordViewHolder> {
 
     public SimpleWordDataDto getItemAtPosition(int position){
         return words.get(position);
+    }
 
+    public void removeItem(int postion){
+        words.remove(postion);
     }
 
     private void initData(){

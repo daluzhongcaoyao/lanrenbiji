@@ -1,16 +1,11 @@
 package com.lanrenbiji.dict.word.ui.items;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,15 +15,11 @@ import com.lanrenbiji.dict.R;
 import com.lanrenbiji.dict.dict.WebViewFragment;
 import com.lanrenbiji.dict.ui.items.ImageTextCustomLayout;
 import com.lanrenbiji.dict.word.data.SimpleWordDataDto;
-import com.lanrenbiji.dict.word.ui.IRecycleViewDataCallback;
 import com.lanrenbiji.dict.word.ui.WordAdapter;
 import com.lanrenbiji.dict.word.ui.WordFragment;
 
 import java.util.Objects;
 import java.util.Optional;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class WordImageTextCustomLayout extends ImageTextCustomLayout {
 
@@ -57,7 +48,6 @@ public class WordImageTextCustomLayout extends ImageTextCustomLayout {
             return;
         }
 
-        System.out.println("zktest currentData" + currentData);
         String url = "";
         if (DICT_TYPE_LONGMAN.equals(dictType)) {
             url = "https://www.ldoceonline.com/dictionary/" + currentData.getWord();
