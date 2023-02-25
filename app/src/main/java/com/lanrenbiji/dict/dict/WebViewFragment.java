@@ -1,5 +1,6 @@
 package com.lanrenbiji.dict.dict;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.lanrenbiji.dict.R;
-import com.lanrenbiji.dict.databinding.FragmentNotificationsBinding;
+import com.lanrenbiji.dict.databinding.FragmentGrammarBinding;
+import com.lanrenbiji.dict.ui.OnBackPressedListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,7 +23,7 @@ import butterknife.ButterKnife;
 public class WebViewFragment extends Fragment {
 
     private WebViewModel webViewModel;
-    private FragmentNotificationsBinding binding;
+    private FragmentGrammarBinding binding;
 
     @BindView(R.id.webView)
     WebView webView;
@@ -41,7 +43,7 @@ public class WebViewFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         webViewModel =
                 new ViewModelProvider(this).get(WebViewModel.class);
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentGrammarBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         ButterKnife.bind(this, root);

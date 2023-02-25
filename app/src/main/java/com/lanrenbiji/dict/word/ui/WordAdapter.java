@@ -36,8 +36,6 @@ public class WordAdapter extends RecyclerView.Adapter<WordViewHolder> {
         // 绑定数据
         SimpleWordDataDto simpleWordDataDto = words.get(position);
         holder.bind(simpleWordDataDto);
-
-
     }
 
     @Override

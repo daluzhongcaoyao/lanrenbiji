@@ -6,20 +6,20 @@
     app:startDestination="@+id/navigation_home">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.lanrenbiji.dict.ui.home.HomeFragment"
-        android:label="@string/title_word"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_word"
         android:name="com.lanrenbiji.dict.word.ui.WordFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_word"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_home"
+        android:name="com.lanrenbiji.dict.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_grammar"
         android:name="com.lanrenbiji.dict.dict.WebViewFragment"
         android:label="@string/title_grammar"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_grammar" />
 </navigation>

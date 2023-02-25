@@ -28,7 +28,6 @@ public class WordItemTouchHelper extends ItemTouchHelper.SimpleCallback {
         int position = viewHolder.getAbsoluteAdapterPosition();
         mAdapter.removeItem(position);
         mAdapter.notifyItemRemoved(position);
-
     }
 
     @Override
